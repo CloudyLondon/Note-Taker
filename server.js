@@ -4,8 +4,8 @@ const app = express();
 const path = require("path");
 
 //saving api routes and html routes in variables
-const apiRoutes = require("./routes/apiRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+const apiRoutes = require("./routes/apiRoutes/apiRoutes");
+const htmlRoutes = require("./routes/htmlRoutes/htmlRoutes");
 
 //they are middleware functions
 app.use(express.urlencoded({ extended: true }));

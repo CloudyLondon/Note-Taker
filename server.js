@@ -4,7 +4,7 @@ const app = express();
 const path = require("path");
 
 //saving api routes and html routes in variables
-const apiRoutes = require("./routes/apiRoutes/apiRoutes");
+const apiRoutes = require("./routes/apiRoutes/notesRoutes");
 const htmlRoutes = require("./routes/htmlRoutes/htmlRoutes");
 
 //they are middleware functions

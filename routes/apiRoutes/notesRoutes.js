@@ -1,21 +1,17 @@
 const path = require("path");
+const fs = require("fs");
 const router = require("express").Router();
-const data = require("../../db/db.json");
 const { readThisFile, createNote } = require("../../lib/notes");
 
 router.get("/notes", (req, res) => {
-  const { notes } = readThisFile();
-  console.log(notes, "hello");
-  const results = notes;
+  const { note } = readThisFile();
+  const results = note;
   res.json(results);
-  console.log(results, "nihao");
 });
 
 router.post("/notes", (req, res) => {
-  const { notes } = readFile();
-  console.log(notes, "wasabi");
-  const newNote = createNote(req.body, notes);
-  console.log(newNote, "what?");
+  const { note } = readThisFile();
+  const newNote = createNote(req.body, note);
   res.json(newNote);
 });
 
